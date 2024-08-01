@@ -1,0 +1,140 @@
+:root {
+    --main-bg-color: #f4f4f4;
+    --main-font-color: #333;
+    --main-border-color: #ddd;
+    --main-padding: 10px;
+    --button-bg-color: #5cb85c;
+    --button-hover-bg-color: #4cae4c;
+    --back-button-bg-color: #337ab7;
+    --back-button-hover-bg-color: #286090;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--main-font-color);
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    box-shadow: var(--box-shadow);
+}
+
+table, th, td {
+    border: 1px solid var(--main-border-color);
+    padding: var(--main-padding);
+}
+
+th {
+    background-color: var(--main-bg-color);
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+button, .button {
+    display: inline-block;
+    padding: var(--main-padding) 20px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    background-color: var(--button-bg-color);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+
+button:hover, .button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.back-button {
+    background-color: var(--back-button-bg-color);
+}
+
+.back-button:hover {
+    background-color: var(--back-button-hover-bg-color);
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: var(--main-padding);
+    margin: 10px 0;
+    border: 1px solid var(--main-border-color);
+    border-radius: 5px;
+    box-shadow: inset var(--box-shadow);
+    transition: var(--transition);
+}
+
+input[type="text"]:focus, textarea:focus, select:focus {
+    border-color: var(--button-bg-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+select {
+    width: calc(100% - 22px); /* Adjust width for padding */
+}
+
+.checkbox {
+    margin: 10px 0;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.action-buttons a {
+    margin-right: 5px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+    table, th, td {
+        display: block;
+    }
+    th, td {
+        padding: var(--main-padding);
+    }
+}
